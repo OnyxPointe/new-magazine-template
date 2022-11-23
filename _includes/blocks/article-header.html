@@ -1,0 +1,9 @@
+<!-- Post info - date, byline, category, title -->
+<section class="p-8 text-center">
+    <div class="">
+        <a class="uppercase" href="#">{{block.category}}</a>
+        <h2 class="text-5xl font-bold p-4">{{block.heading}}</h2>
+        <p class="uppercase">By <a href="#">{{block.author}}</a></p>
+        <p>{{ block.date | date: "%b %d, %Y" }}</p>
+    </div>
+</section>

@@ -1,0 +1,19 @@
+<!-- Text and Img -->
+<!-- <section class="grid gap-1 grid-cols-1 md:grid-cols-2 p-8 items-center">
+    <div class="grid items-center p-6">
+        {{block.text_html}}
+    </div>
+    <div class="text-center">
+        <img src="{{block.content_image}}" alt="{{block.image-alt-text}}"/>
+    </div>
+</section> -->
+
+<!--  -->
+<section class="grid gap-1 grid-cols-1 md:grid-cols-2 p-8 items-center">
+    <div class="grid items-center p-6 {% if block.position == 'right' %} order-2 {% endif %}">
+        {{block.text_html}}
+    </div>
+    <div class="text-center">
+        <img src="{{block.content_image}}" alt="{{block.image-alt-text}}"/>
+    </div>
+</section>

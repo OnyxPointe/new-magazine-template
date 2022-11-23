@@ -1,5 +1,20 @@
 ---
 layout: default
 title: Homepage
+seo:
+    title: Index Page
+    meta-description:
+    meta-keywords:
+    featured-image_path:
+    hide-from-google: false
+page_blocks:
+    -
+        _id: cta
+        title: Call to Action Block
+        text: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores ad, quis, sit officia est enim beatae recusandae unde perferendis reiciendis qui dolorem! Aliquam dolore eum odio. Odit rem in saepe.
+        button-name: Read more
+        button_url: https://www.google.com/
 ---
-<h1 class="text-4xl font-bold text-slate-900">Welcome to your homepage!</h1>
+{% include posts-gallery.html %}
+
+{% include blocks.html %}

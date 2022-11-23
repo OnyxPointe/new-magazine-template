@@ -1,0 +1,8 @@
+<!-- Gallery section -->
+<section class="grid gap-3 ms:grid-cols-1 {{block.section-styles}} md:grid-cols-2 lg:grid-cols-4">
+    {% for item in block.gallery_images %}
+        <div>
+            <img class="p-3" src="{{item.gallery_image}}" alt="{{item.image-alt-text}}"/>
+        </div>
+    {% endfor %}
+</section>

@@ -1,0 +1,97 @@
+---
+layout: default
+seo:
+    title: Post
+    meta-description: 
+    meta-keywords:
+    featured-image_path:
+    hide-from-google: false
+title: Title of Article
+category: travel
+date: 2022-11-20
+featured_image:
+author: Author
+banner-block:
+    banner_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    banner-alt-text: test
+
+text-content-block:
+    text_html: >- 
+     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic dolorum quam recusandae sequi quis asperiores sapiente, temporibus et officiis! Quisquam ut aut dolores distinctio recusandae eum voluptas, modi repellat excepturi! </p>
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit tenetur temporibus nisi qui necessitatibus distinctio voluptatum explicabo, itaque sunt eaque? Quibusdam eum veniam eos, ea ipsam aspernatur omnis a minima!</p>
+    content_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: test 
+    
+video_url: https://www.youtube.com/embed/CBwKJfrm5-U
+
+gallery-block:
+  - gallery_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: test
+  - gallery_image: https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1557093793-e196ae071479?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+  - gallery_image: https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhbGl8ZW58MHx8MHx8&auto=format&fit=crop&w=1000&q=60
+    image-alt-text: 
+
+cta-block:
+    text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorum aliquid, reiciendis nisi ab distinctio sit sint molestias architecto perferendis ducimus cupiditate dolores temporibus enim accusantium exercitationem neque quo quidem?
+    button-name: Link
+    button_url: https://www.google.com/
+
+---
+
+<!-- Post info - date, byline, category, title -->
+<section class="p-8 text-center">
+    <a class="uppercase" href="#">{{page.category}}</a>
+    <h2 class="text-5xl font-bold p-4">{{page.title}}</h2>
+    <p class="uppercase">By <a href="#">{{page.author}}</a></p>
+    <p>{{ "March 14, 2016" | date: "%b %d, %Y" }}</p>
+</section>
+
+<!-- DONE - Full width image banner -->
+<section class="p-8">
+    <img class="object-cover w-full h-[60vh]" src="{{page.banner-block.banner_image}}" alt={{page.banner-block.banner-alt-text}}/>
+</section>
+
+<!-- DONE - Text and Img -->
+<section class="grid gap-1 grid-cols-1 md:grid-cols-2 p-8 items-center">
+    <div class="grid items-center p-6">
+        {{page.text-content-block.text_html}}
+    </div>
+    <div class="text-center">
+        <img src="{{page.text-content-block.content_image}}" alt="{{page.text-content-block.image-alt-text}}"/>
+    </div>
+</section>
+
+<!-- Youtube embed -->
+<section class="p-8 max-w-4xl mx-auto">
+    <div class="p-6 w-full" style="padding: 56.25% 0 0 0; position:relative;">
+        <iframe width="560" height="315" src="{{page.video_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+</section>
+
+<!-- Gallery section -->
+<section class="grid gap-3 ms:grid-cols-1 pad-8 md:grid-cols-2 lg:grid-cols-4">
+    {% for item in page.gallery-block %}
+    <div>
+        <img class="p-3" src="{{item.gallery_image}}" alt="{{item.image-alt-text}}"/>
+    </div>
+    {% endfor %}
+</section>
+
+<!-- CTA -->
+<section class="grid gap-1 grid-cols-1 md:grid-cols-4 py-8 items-center">
+    <p class="md:pl-20 sm:p-6 col-span-3">{{page.cta-block.text}}</p>
+    <div class="text-center col-span-1">
+        <a href="{{page.cta-block.button_url}}" class="bg-gray-800 uppercase text-gray-100 py-3 px-5">{{page.cta-block.button-name}}</a>
+    </div>
+</section>

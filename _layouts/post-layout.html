@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<!-- Post info - date, byline, category, title -->
+<section class="py-12 px-8 text-center">
+    <div class="">
+        <!-- Displays all the categories -->
+        <!-- <a class="uppercase" href="#">{{page.categories | join: " "}}</a> -->
+        <!-- Displays only the specified catergory -->
+        <a class="uppercase" href="#">{{page.categories[0]}}</a>
+        <h2 class="text-5xl font-bold p-4">{{page.title}}</h2>
+        <p class="uppercase">By <a href="#">{{page.author}}</a></p>
+        <p>{{ page.date | date: "%b %d, %Y" }}</p>
+    </div>
+</section>
+
+{% include blocks.html %}
+
+{% include related-posts.html %}
+
+{% include social-sharing.html %}

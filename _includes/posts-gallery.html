@@ -1,0 +1,14 @@
+<div class="girl-cols-1 grid min-h-screen gap-2 min-h-[50vh] md:min-h-[80vh] md:grid-cols-4 py-10 mx-10">
+
+    {% for post in site.posts limit:6 %}
+    <a href="{{post.url}}" class="bg-blue-100 p-4 bg-cover bg-center relative {% cycle 'col-span-1', 'col-span-1 md:col-span-2 md:row-span-2 ', 'col-span-1', 'col-span-1' %}" style="background-image:url('{{post.image_path}}')">
+        <div class="absolute inset-0 hover:bg-zinc-600/[.9] p-4 text-transparent flex justify-left items-center hover:text-white transition duration-500">
+            <div>
+                <h2 class="text-3xl playfair">{{post.title}}</h2>
+                <p class="uppercase">{{post.category}}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+
+</div>
